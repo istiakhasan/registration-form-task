@@ -1,0 +1,275 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .container_body{
+            background: #E8EFF9; 
+            padding:0 20px;
+        }
+
+        header {
+            background: #242156;
+            color: #ffffff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            min-height: 60px;
+
+        }
+
+        header h1 {
+            font-size:22px; 
+            text-align:center;
+        }
+
+
+        .form_table{
+            width:100%; 
+            table-layout:fixed;
+            padding-top:10px;
+            border-collapse:separate; 
+            border-spacing:10px;
+        }
+        .form_table tr td{
+            vertical-align:top;
+        }
+        
+        .form_table tr td:first-child{
+            width:150px;
+        }
+        .title{
+            font-weight:500; 
+            font-size:14px;
+        }
+
+        .cm_input input, .cm_input textarea,.cm_input select {
+            width:100%; 
+            border:1px solid rgba(0,0,0,.1); 
+            outline:none;
+            padding:5px 10px;
+            border-radius:4px;
+        }
+        .cm_input select {
+            padding:10px;
+        }
+
+        .cm_input label {
+          display:block;
+          font-size:12px; 
+          color:gray; 
+          padding-left:10px;
+        }
+
+        .dof_wraper{
+            display:flex;
+            align-items:center;
+            gap:4px;
+            flex-wrap:wrap;
+
+        }
+        .dof_wraper .cm_input{
+            flex:1;
+        }
+
+        .radio_wraper{
+            display:flex;
+            align-items:center;
+            justify-content:start;
+            gap:20px;
+
+        }
+        .radio_wraper p{
+    
+     }   
+        
+        .radio_wraper input{
+            width:fit-content;
+        }
+
+        .submit_btn{
+           border:none; 
+           border-radius:4px; 
+           color:white; 
+           font-size:14px;
+           font-weight:bold;
+            background: #242156; 
+            width:200px;
+            padding:8px 20px;
+            display:block; 
+            margin:30px auto;
+
+        }
+            
+            </style>
+</head>
+<body>
+    <header>
+       <h1>Registration Form</h1>
+    </header>
+
+    <div class="container_body">
+        <form>
+       <table class="form_table">
+           <tr>
+                <td><p class="title"><strong>Name</strong></p></td>
+                <td>
+                    <div class="cm_input"> 
+                        <input placeholder="Mr." />
+                        <label>First Name</label>
+                    </div>
+                </td>
+                <td>
+                    <div class="cm_input">
+                        <input placeholder="Mr." />
+                        <label>Last Name</label>
+                    </div>
+                </td>
+           </tr>
+            <tr>
+                <td><p class="title"><strong>Mobile Number</strong></p></td>
+                <td>
+                    <div class="cm_input">
+                        <input placeholder="00123456789" />
+                    </div>
+                </td>
+                <td>
+                   
+                </td>
+            </tr>
+            <tr>
+                <td><p class="title"><strong>Email</strong></p></td>
+                <td>
+                    <div class="cm_input">
+                        <input placeholder="xyz@gmail.com" />
+                    </div>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td><p class="title"><strong>Address</strong></p></td>
+                <td>
+                    <div class="cm_input">
+                        <textarea cols="20" id="Description" name="Description" rows="4"></textarea>
+                        
+                    </div>
+                </td>
+                <td style="vertical-align:bottom">
+                    <div class="cm_input">
+                    <select>
+                        <option>Dhaka</option>
+                        <option>Mymensing</option>
+                    </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><p class="title"><strong>Date of Birth</strong></p></td>
+                <td> 
+                    <div class="dof_wraper">
+                        <div class="cm_input">
+                            <select>
+                                <option>Dhaka</option>
+                                <option>Mymensing</option>
+                            </select>
+                        </div>
+                        <div class="cm_input">
+                            <select>
+                                <option>Dhaka</option>
+                                <option>Mymensing</option>
+                            </select>
+                        </div>
+                        <div class="cm_input">
+                            <select>
+                                <option>Dhaka</option>
+                                <option>Mymensing</option>
+                            </select>
+                        </div>
+                    </div>
+                   
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><p class="title"><strong>Gender</strong></p></td>
+                <td>
+                    <div class="dof_wraper">
+                        <div class="cm_input">
+                            <p class="radio_wraper"> <input type="radio" />Male</p>
+                        </div>
+                        <div class="cm_input">
+                            <p class="radio_wraper"> <input type="radio" />Female</p>
+                        </div>
+
+                    </div>
+
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><p class="title"><strong>Hobby</strong></p></td>
+                <td colspan="2">
+                    <div class="dof_wraper">
+                        <div class="cm_input">
+                            <p class="radio_wraper"> <input type="checkbox" />Reading</p>
+                        </div>
+                        <div class="cm_input">
+                            <p class="radio_wraper"> <input type="checkbox" />Writting</p>
+                        </div>
+                        <div class="cm_input">
+                            <p class="radio_wraper"> <input type="checkbox" />Travelling</p>
+                        </div>
+                        <div class="cm_input">
+                            <p class="radio_wraper"> <input type="checkbox" />Playing</p>
+                        </div>
+                        <div class="cm_input">
+                            <p class="radio_wraper"> <input type="checkbox" />Gameing</p>
+                        </div>
+
+                    </div>
+
+                </td>
+            </tr>
+            <tr>
+                <td><p class="title"><strong>Password</strong></p></td>
+                <td >
+                   
+                        <div class="cm_input">
+                           <input type="password" value="........" />
+                        </div>
+                       
+
+                   
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"><button class="submit_btn">Submit</button></td>
+            </tr>
+       </table>
+        </form>
+    </div>
+
+
+</body>
+</html>
